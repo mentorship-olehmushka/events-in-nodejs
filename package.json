@@ -1,0 +1,10 @@
+{
+  "name": "events-in-nodejs",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "repository": "https://github.com/mentorship-olehmushka/events-in-nodejs.git",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}
