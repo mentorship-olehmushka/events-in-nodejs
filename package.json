@@ -5,9 +5,9 @@
   "repository": "https://github.com/mentorship-olehmushka/events-in-nodejs.git",
   "license": "MIT",
   "scripts": {
-    "calc": "node ./src/calc.js",
-    "timer": "node ./src/timer.js",
-    "github-user-repo": "node ./src/github-user-repo.js"
+    "calc": "node ./src/main.js calc",
+    "timer": "node ./src/main.js timer",
+    "github-user-repo": "node ./src/main.js github"
   },
   "dependencies": {
     "axios": "^0.19.2"

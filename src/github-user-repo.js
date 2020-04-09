@@ -1,6 +1,12 @@
 const axios = require('axios');
 
 const getUserRepo = async (user,repoName) => {
+  //check if module called with two argument
+  if (!user || !repoName) {
+    console.log('There are two required arguments: \n1. [User name] \n2. [Repo name]');
+    return;
+  }
+
   const urlBuilder = `https://api.github.com/users/${user}/repos`;
   try {
     const repositories = await axios.get(urlBuilder);
@@ -15,10 +21,4 @@ const getUserRepo = async (user,repoName) => {
   }
 };
 
-//check if module called with two argument
-if (process.argv.length !== 4) {
-  console.log('There are two required arguments: \n1. [User name] \n2. [Repo name]');
-} else {
-  getUserRepo(process.argv[2], process.argv[3]);
-}
-
+module.exports = getUserRepo;
